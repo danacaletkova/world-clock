@@ -18,26 +18,29 @@
     <div class="content">
       <header>
         <h1>WORLD <img src="src/clock.svg" alt="" />'CLOCK</h1>
-        <select name="city" id="cities">
+        <select name="city" id="select-cities">
           <option value="">Select a city</option>
-          <option value="perth">Perth</option>
-          <option value="brno">Brno</option>
+          <option value="Australia/Perth">Perth</option>
+          <option value="Europe/Prague">Prague</option>
+          <option value="Pacific/Auckland">Auckland</option>
         </select>
       </header>
       <main>
-        <div class="city" id="perth">
-          <div class="left">
-            <h2>Perth</h2>
-            <div class="date"></div>
-          </div>
-          <div class="time"></div>
-        </div>
-        <div class="city" id="brno">
-          <div class="left">
-            <h2>Brno</h2>
-            <div class="date"></div>
-          </div>
-          <div class="time"></div>
+        <div id="displayed-cities">
+          <!-- <div class="city" id="perth">
+            <div class="left">
+              <h2>Perth</h2>
+              <div class="date"></div>
+            </div>
+            <div class="time"></div>
+          </div> -->
+          <!-- <div class="city" id="brno">
+            <div class="left">
+              <h2>Brno</h2>
+              <div class="date"></div>
+            </div>
+            <div class="time"></div>
+          </div> -->
         </div>
       </main>
     </div>
