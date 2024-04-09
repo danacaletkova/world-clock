@@ -1,10 +1,31 @@
+body {
+  background-color: rgba(230, 230, 230, 0.5);
+  font-family: "Oswald", sans-serif;
+}
+
 .content {
-  margin: 100px auto;
-  display: flex;
-  justify-content: center;
-  align-items: end;
+  min-width: 300px;
+  max-width: 600px;
   text-align: center;
-  color: #3f3d56;
+  color: rgb(63, 61, 86);
+  background-color: #fff;
+  padding: 50px;
+  margin: 100px auto;
+  margin-bottom: 0;
+  border: 1px solid #e6e6e6;
+  border-radius: 15px;
+  box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 40px;
+  vertical-align: middle;
+  font-weight: 900;
+}
+
+img {
+  width: 30%;
+  vertical-align: middle;
 }
 
 select {
@@ -12,39 +33,34 @@ select {
   padding: 10px;
   font-size: 16px;
   border-radius: 5px;
+  font-family: "Oswald", sans-serif;
+  color: #3f3d56;
+  opacity: 0.9;
 }
 
-img {
-  width: 200px;
-  padding-left: 50px;
+option {
+  color: rgba(63, 61, 86, 0.9);
 }
 
-.text {
-  min-width: 300px;
-  border: 1px solid #e6e6e6;
-  border-radius: 20px;
-  box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.1);
-  padding: 50px;
+.city {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+  margin: 10px 0;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-  margin: 0;
-  font-size: 30px;
+.city:last-child {
+  border: none;
 }
 
 .left {
   text-align: left;
 }
-.city {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 0;
-  margin: 10px 0;
-  border-bottom: 1px dotted rgba(0, 0, 0, 0.1);
-}
 
-.city:last-child {
-  border: none;
+h2 {
+  margin: 0;
+  font-size: 30px;
 }
 
 .date {
@@ -63,12 +79,17 @@ h2 {
 
 footer {
   text-align: center;
-  font-size: smaller;
-  padding-top: 20px;
+  font-size: 14px;
+  margin: 42px auto;
+  color: rgba(63, 61, 86, 0.8);
 }
 
 footer a {
   text-decoration: none;
   font-weight: 700;
-  color: #3f3d56;
+  color: rgb(63, 61, 86);
+}
+
+footer a:hover {
+  color: rgb(255, 178, 33);
 }

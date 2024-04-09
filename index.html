@@ -4,38 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/style.css" />
-    <title>World clock</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>World O'clock</title>
   </head>
   <body>
     <div class="content">
-      <div class="text">
-        <header>
-          <h1>World clock</h1>
-          <select name="city" id="cities">
-            <option value="">Select a city</option>
-            <option value="perth">Perth</option>
-            <option value="brno">Brno</option>
-          </select>
-        </header>
-        <main>
-          <div class="city">
-            <div class="left">
-              <h2>Perth</h2>
-              <div class="date">8 April 2024</div>
-            </div>
-
-            <div class="time">2:44 <small>PM</small></div>
+      <header>
+        <h1>WORLD <img src="src/clock.svg" alt="" /> CLOCK</h1>
+        <select name="city" id="cities">
+          <option value="">Select a city</option>
+          <option value="perth">Perth</option>
+          <option value="brno">Brno</option>
+        </select>
+      </header>
+      <main>
+        <div class="city">
+          <div class="left">
+            <h2>Perth</h2>
+            <div class="date">8 April 2024</div>
           </div>
-          <div class="city">
-            <div class="left">
-              <h2>Brno</h2>
-              <div class="date">8 April 2024</div>
-            </div>
-            <div class="time">8:44 <small>AM</small></div>
+          <div class="time">2:44 <small>PM</small></div>
+        </div>
+        <div class="city">
+          <div class="left">
+            <h2>Brno</h2>
+            <div class="date">8 April 2024</div>
           </div>
-        </main>
-      </div>
-      <div class="image"><img src="src/clock.svg" alt="" /></div>
+          <div class="time">8:44 <small>AM</small></div>
+        </div>
+      </main>
     </div>
     <footer>
       Coded by
