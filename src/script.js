@@ -1,27 +1,22 @@
-// function updateTime() {
-//   //Perth
-//   let perth = document.querySelector("#perth");
-//   let perthDate = perth.querySelector(".date");
-//   let perthTime = perth.querySelector(".time");
+function updateTime() {
+  let localTimeZone = moment.tz.guess();
+  let localCityName = localTimeZone.replace("_", " ").split("/")[1];
+  let localDate = moment().tz(localTimeZone).format("Do MMMM yyyy");
+  let localTime = moment()
+    .tz(localTimeZone)
+    .format("h:mm:ss [<small>] A [</small>]");
 
-//   perthDate.innerHTML = moment().tz("Australia/Perth").format("Do MMMM yyyy");
-//   perthTime.innerHTML = moment()
-//     .tz("Australia/Perth")
-//     .format("h:mm:ss [<small>] A [</small>]");
+  let cityElement = document.querySelector("#city-name");
+  let dateElement = document.querySelector("#city-date");
+  let timeElement = document.querySelector("#city-time");
 
-//   //Brno
-//   let brno = document.querySelector("#brno");
-//   let brnoDate = brno.querySelector(".date");
-//   let brnoTime = brno.querySelector(".time");
+  cityElement.innerHTML = localCityName;
+  dateElement.innerHTML = localDate;
+  timeElement.innerHTML = localTime;
+}
 
-//   brnoDate.innerHTML = moment().tz("Europe/Prague").format("Do MMMM yyyy");
-//   brnoTime.innerHTML = moment()
-//     .tz("Europe/Prague")
-//     .format("h:mm:ss [<small>] A [</small>]");
-// }
-
-// updateTime();
-// setInterval(updateTime, 1000);
+updateTime();
+setInterval(updateTime, 1000);
 
 function updateCity(event) {
   let cityTimeZone = event.target.value;
@@ -31,7 +26,7 @@ function updateCity(event) {
   let cityName = cityTimeZone.replace("_", " ").split("/")[1];
   let cityTime = moment().tz(cityTimeZone);
   let displayedCitiesElement = document.querySelector("#displayed-cities");
-  displayedCitiesElement.innerHTML = `          
+  displayedCitiesElement.innerHTML += `          
     <div class="city">
       <div class="left">
         <h2>${cityName}</h2>
