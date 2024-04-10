@@ -1,26 +1,37 @@
-//Initially displayed city (local timezone)
+//Initially displayed cities
 
 function updateData() {
-  let localTimeZone = moment.tz.guess();
-  let localCityName = localTimeZone.replace("_", " ").split("/")[1];
-  let localDate = moment().tz(localTimeZone).format("Do MMMM yyyy");
-  let localTime = moment()
-    .tz(localTimeZone)
+  //Brno
+  let brnoElement = document.querySelector("#brno");
+  let brnoDateElement = brnoElement.querySelector(".date");
+  let brnoTimeElement = brnoElement.querySelector(".time");
+
+  let brnoDate = moment().tz("Europe/Prague").format("Do MMMM yyyy");
+  let brnoTime = moment()
+    .tz("Europe/Prague")
     .format("h:mm:ss [<small>] A [</small>]");
 
-  let cityElement = document.querySelector("#city-name");
-  let dateElement = document.querySelector("#city-date");
-  let timeElement = document.querySelector("#city-time");
+  brnoDateElement.innerHTML = brnoDate;
+  brnoTimeElement.innerHTML = brnoTime;
 
-  cityElement.innerHTML = localCityName;
-  dateElement.innerHTML = localDate;
-  timeElement.innerHTML = localTime;
+  //Perth
+  let perthElement = document.querySelector("#perth");
+  let perthDateElement = perthElement.querySelector(".date");
+  let perthTimeElement = perthElement.querySelector(".time");
+
+  let perthDate = moment().tz("Australia/Perth").format("Do MMMM yyyy");
+  let perthTime = moment()
+    .tz("Australia/Perth")
+    .format("h:mm:ss [<small>] A [</small>]");
+
+  perthDateElement.innerHTML = perthDate;
+  perthTimeElement.innerHTML = perthTime;
 }
 
 updateData();
 setInterval(updateData, 1000);
 
-//Added city
+//Added cities
 
 function addCity(event) {
   let cityTimeZone = event.target.value;
