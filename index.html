@@ -20,26 +20,28 @@
         <a href="/" title="start over"
           ><h1>WORLD <img src="src/clock.svg" alt="" />'CLOCK</h1></a
         >
-
+        <h3>Current time at my favourite places</h3>
         <select name="city" id="select-cities">
-          <option value="">Select a city</option>
-          <option value="">Hawaii</option>
-          <option value="">Vancouver</option>
-          <option value="">New York</option>
-          <option value="">Sao Paulo</option>
-          <option value="">Azores</option>
-          <option value="">London</option>
-          <option value="">Prague</option>
-          <option value="">Kiev</option>
-          <option value="">Nairobi</option>
-          <option value="">Dubai</option>
-          <option value="">New Delhi</option>
-          <option value="">Hanoi</option>
-          <option value="">Singapore</option>
-          <option value="Australia/Perth">Perth</option>
-          <option value="Australia/Melbourne">Melbourne</option>
-          <option value="Pacific/Auckland">Auckland</option>
-          <option value="Pacific/Samoa">Samoa</option>
+          <option value="">Choose a city</option>
+          <option value="America/Vancouver" title="place I would like to visit">
+            Vancouver
+          </option>
+          <option
+            value="America/New_York"
+            title="place I was told I should visit"
+          >
+            New York
+          </option>
+          <option value="Europe/London" title="place I visited as a kid">
+            London
+          </option>
+          <option value="Asia/Ho_Chi_Minh" title="place I visited">
+            Ho Chi Minh
+          </option>
+          <option value="Australia/Brisbane" title="place where I lived">
+            Brisbane
+          </option>
+          <option value="current">Your current time zone</option>
         </select>
       </header>
       <main>
@@ -51,7 +53,7 @@
             </div>
             <div class="time"></div>
           </div>
-          <div class="city" id="perth" title="where I live now">
+          <div class="city" id="perth" title="where I live">
             <div class="left">
               <h2>Perth</h2>
               <div class="date"></div>

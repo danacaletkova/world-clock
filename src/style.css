@@ -4,12 +4,11 @@ body {
 }
 
 .content {
-  min-width: 300px;
   max-width: 600px;
   text-align: center;
   color: rgb(63, 61, 86);
   background-color: #fff;
-  padding: 50px;
+  padding: 30px 50px;
   margin: 100px auto;
   margin-bottom: 0;
   border: 1px solid #e6e6e6;
@@ -26,11 +25,23 @@ h1 {
   font-size: 40px;
   vertical-align: middle;
   font-weight: 900;
+  margin-bottom: 20px;
 }
 
 img {
   width: 30%;
   vertical-align: middle;
+}
+
+header .description {
+  margin: 20px;
+}
+
+h3 {
+  font-size: small;
+  font-style: italic;
+  opacity: 0.8;
+  font-weight: 300;
 }
 
 select {
@@ -43,13 +54,19 @@ select {
   opacity: 0.9;
 }
 
+select:hover {
+  border-color: rgb(255, 178, 33);
+}
+
 option {
   color: rgba(63, 61, 86, 0.9);
 }
 
 .city {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  align-items: flex-end;
   padding: 30px 0;
   margin: 10px 0;
   border-bottom: 1px dashed rgba(0, 0, 0, 0.1);

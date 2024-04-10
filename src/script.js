@@ -32,11 +32,14 @@ updateData();
 setInterval(updateData, 1000);
 
 //Added cities
-
 function addCity(event) {
   let cityTimeZone = event.target.value;
-  let cityName = cityTimeZone.replace("_", " ").split("/")[1];
+  if (cityTimeZone === "current") {
+    cityTimeZone = moment.tz.guess();
+  }
+  let cityName = cityTimeZone.replaceAll("_", " ").split("/")[1];
   let cityTime = moment().tz(cityTimeZone);
+
   let displayedCitiesElement = document.querySelector("#displayed-cities");
   displayedCitiesElement.innerHTML += `          
     <div class="city">
